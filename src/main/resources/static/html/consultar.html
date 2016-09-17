@@ -1,0 +1,66 @@
+<div class="col-md-6 col-md-padding-3">
+    <div class="alert alert-info" ng-show="mostrarhelp">
+        <p>(1)PEDIDO_RECEBIDO: Recebemos seu pedido e estamos verificando o pagamento.</p>
+        <p>(2)PAGAMENTO_APROVADO: Identificamos o pagamento e estamos preparando sua encomenda. Levamos no máximo 1 dia pra isso :-) </p>
+        <p>(3)ENVIADO_CORREIOS: Enviamos sua encomenda pelo correio. Já já chega :-D</p>
+    </div>
+    <div class="form-group" ng-show="mostrarForm">
+        <h3>
+            <i class="fa fa-facebook-square"></i>
+            <i class="fa fa-whatsapp"></i>
+            <span>Escreva seu whats ou face usados no dia da compra:</span>
+        </h3>
+
+        <label for="cliente">face ou whats:
+            <input type="text" class="form-control" id="cliente" ng-model="cliente">
+        </label>
+        <button type="button" class="btn btn-success btn-lg" ng-class="cliente ? 'enabled':'disabled'" ng-click="buscarCompras(cliente)"> 
+            <i class="fa fa-search" aria-hidden="true"></i> 
+            <span>Buscar</span>
+            </button>
+    </div>
+
+    <div ng-hide="mostrarForm">
+        <h3>Compras de {{cliente}}<small><a ng-click="mostrarForm = true"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> </small>:</h3>
+    </div>
+
+    <table class="table table-striped" ng-show="vendas">
+        <thead>
+            <tr>
+                <th>Produtos</th>
+                <th>Data</th>
+                <th>Comprovante</th>
+                <th>
+                    Status
+                    <a ng-click="mostrarhelp = !mostrarhelp" data-toggle="popover" title="Status do seu pedido" ><span class="badge">?</span></a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr ng-repeat="venda in vendas">
+                <td>{{venda.produtos}}</td>
+                <td>{{ venda.data | date : "d/M/yyyy h:mm a" }}</td>
+                <td><a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes/image">comprovante</a> </td>
+                <td>
+                    <div>
+                        [{{venda.vendaStatus}}]
+                    </div>
+                    <div ng-show="venda.comprovantePac">
+                        <a ng-href="{{url}}/vendas/{{venda.codigo}}/comprovantes-pac/image">rastreio</a>
+                    </div>
+                    <div ng-show="uploading" class="big-icon">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Não deixe de conferir sempre as novidades no nosso site:</h4>
+    <p><a type="button" href="http://www.ateliermakeup.com.br" class="btn btn-info btn-lg"><span>Ir para o site</span></a></p>
+
+
+</div>
+

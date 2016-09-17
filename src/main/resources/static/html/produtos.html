@@ -1,0 +1,15 @@
+<div class="col-md-6 col-md-padding-3">
+    <div class="alert alert-warning" ng-show="produtosinvalidos && produtos">
+        <strong>Atenção!</strong> Voce precisa me dizer o que comprou, flor...
+    </div>
+    <h3>O que você comprou?</h3>
+    <div class="form-group">
+        <label for="cep">produtos e quantidades:</label>
+        <textarea placeholder="Escreva aqui o que voce comprou. por exemplo: 3 caixas de clilos modelo 047, duas paletas atelier e um picel coastal scents"
+                  class="form-control" id="cep" ng-model="produtos" rows="7" ng-keyup="validarProdutos(produtos)"></textarea>
+    </div>
+    <div class="form-group" ng-show="produtos">
+        <button type="button" class="btn btn-success btn-lg" ng-class="produtosinvalidos ? 'disabled':'enabled'" ng-click="processar(produtos)">Proximo Passo</button>
+    </div>
+
+</div>

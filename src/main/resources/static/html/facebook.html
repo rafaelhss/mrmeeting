@@ -1,0 +1,18 @@
+<div class="col-md-6 col-md-padding-3">
+    <h3><i class="fa fa-user" aria-hidden="true"></i> <span>Qual seu Nome:</span></h3>
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" id="nome" ng-model="nome">
+    </div>
+
+    <h3><i class="fa fa-facebook-square"></i> <span>Qual seu Face:</span></h3>
+    <div class="form-group">
+        <label for="facebook">facebook:</label>
+        <input type="cel" class="form-control" id="facebook" ng-model="facebook">
+    </div>
+
+    <div class="form-group" ng-show="facebook">
+        <button type="button" class="btn btn-success btn-lg" ng-class="facebook ? 'enabled':'disabled'" ng-click="processar(facebook, nome)"> <i class="fa fa-step-forward" aria-hidden="true"></i> Proximo Passo</button>
+    </div>
+
+</div>

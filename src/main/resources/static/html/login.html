@@ -1,0 +1,9 @@
+<div class="col-md-6 col-md-padding-3">
+    <div class="container" ng-show="!authenticated">
+        Login with: <a ng-href={{url}}>Facebook</a>
+    </div>
+    <div class="container" ng-show="authenticated">
+        Logged in as: <span ng-bind="user"></span>
+        <a href="#/vendas">Ir para vendas</a>
+    </div>
+</div>

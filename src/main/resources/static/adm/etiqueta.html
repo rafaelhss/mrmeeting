@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tillaApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+
+    <script src="../bower_components/ng-dialog/js/ngDialog.min.js"></script>
+
+
+
+    <script src="../js/ng-file-model.js"></script>
+
+    <script src="../js/tillaapp.js"></script>
+    <script src="js/EtiquetaController.js"></script>
+
+
+
+    <title>Tilla Checkout</title>
+
+    <style>
+        h1, h2, h3, h4, h5, h6{
+            line-height: 25px;
+        }
+        table {
+            border-spacing: 30px;
+            border-collapse: separate;
+        }
+    </style>
+</head>
+
+<body ng-controller="tillaCtrl">
+    <div ng-controller="EtiquetaController">
+
+        <h1>Vendas com status=PAGAMENTO_APROVADO</h1>
+
+                 <table ng-repeat="venda in vendas" style="line-height: 1px;">
+                     <thead>
+                     <tr>
+                         <th><h2>Destinatario:</h2></th>
+                         <th><h2>Remetente:</h2></th>
+                         <th><h2>Produtos:</h2></th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     <tr>
+                         <td style="border: 2px dashed; padding: 20px;">
+                            <h2><span>{{venda.nome}}</span></h2>
+                            <h2><span>{{venda.endereco.logradouro}}</span><span> n.{{venda.endereco.numero}}</span> </h2>
+                            <h2><span ng-show="venda.endereco.ap">Compl: {{venda.endereco.ap}}</span></h2>
+                            <h2><span>Bairro: {{venda.endereco.bairro}}</span></h2>
+                            <h2><span>{{venda.endereco.cidade}} - {{venda.endereco.estado}}</span></h2>
+                            <h2><span>CEP: {{venda.endereco.cep}}</span></h2>
+                         </td>
+                         <td style="border: 2px dashed; padding: 20px;">
+                             <h2><span>Tilla Viana</span></h2>
+                             <h2><span>SQN 214 Bloco F</span></h2>
+                             <h2><span>ap 116</span></h2>
+                             <h2><span>Asa Norte</span></h2>
+                             <h2><span>Brasilia - DF</span></h2>
+                             <h2><span>CEP: 70873-060</span></h2>
+                         </td>
+                         <td>
+                             <h4>{{venda.produtos}}</h4>
+                         </td>
+                     </tr>
+                     </tbody>
+                 </table>
+             </div>
+
+
+</body>
+</html>
