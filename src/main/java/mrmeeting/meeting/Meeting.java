@@ -15,8 +15,8 @@ import java.util.List;
 public class Meeting {
 
     private String subject;
-    private Date start;
-    private Date end;
+    private String start;
+    private String end;
 
     private Attendee organizer;
 

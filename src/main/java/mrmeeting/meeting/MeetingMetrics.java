@@ -11,4 +11,5 @@ import lombok.Setter;
 public class MeetingMetrics {
     private Meeting meeting;
     private Double totalCost;
+    private long minutesDuration;
 }

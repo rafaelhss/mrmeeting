@@ -8,14 +8,6 @@ import mrmeeting.meeting.MeetingMetrics;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.math.BigDecimal;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +27,8 @@ public class MeetingService {
 
         MeetingMetrics result = new MeetingMetrics();
         result.setTotalCost(provider.getMeetingTotalCost(meeting));
+        result.setMinutesDuration(provider.getMinutesDuration(meeting));
+        result.setMeeting(meeting);
 
         return result;
     }

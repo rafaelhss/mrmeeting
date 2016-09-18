@@ -23,12 +23,14 @@ public class MeetingController {
         return counter.incrementAndGet() +  String.format(template, name);
     }
 
-    @PostMapping("/meeting/cost")
+    @CrossOrigin(origins = "http://localhost:63343")
+    @PostMapping("/api/meeting/cost")
     public MeetingMetrics calculateMetrics(@RequestBody Meeting meeting) {
         return meetingService.calculate(meeting);
     }
 
-    @PostMapping("/raw-meeting/meeting/cost")
+    @CrossOrigin(origins = "http://localhost:63343")
+    @PostMapping("/api/raw-meeting/meeting/cost")
     public MeetingMetrics calculateMetrics(@RequestBody String rawMeeting) {
         Meeting meeting = meetingService.parseMeeting(rawMeeting);
         return meetingService.calculate(meeting);

@@ -22,6 +22,11 @@ public class ServidorTransparenciaProvider extends CostProvider {
         return extraiRemuneracao(extraiIdServidor(name));
     }
 
+    @Override
+    public int getDefaultMonthHours() {
+        return 8*20;
+    }
+
     private Double extraiRemuneracao(int idServidor){
         String REMUNERACAO_LINHA_CLASS = "remuneracaolinhatotalliquida";
         String COLUNA_VALOR = "colunaValor";

@@ -1,0 +1,53 @@
+<div class="col-md-6 col-md-padding-3" ng-hide="meeting">
+    <h3><i class="fa fa-user" aria-hidden="true"></i> <span>Cole aqui o cabeçalho:</span></h3>
+    <div class="form-group">
+        <label for="cabecalho">Cabecalho::</label>
+        <textarea rows="10" type="text" class="form-control" id="cabecalho" ng-model="cabecalho"></textarea>
+    </div>
+
+    <div class="form-group" ng-show="cabecalho">
+        <button type="button" class="btn btn-success btn-lg" ng-click="parseHeader(cabecalho)">
+            <i class="fa fa-step-forward" aria-hidden="true"></i>Consultar</button>
+    </div>
+
+</div>
+
+<div class="col-md-6 col-md-padding-3" ng-show="meeting">
+    <h3><span>Sua reuniao:</span></h3>
+    <div class="form-group">
+        <label for="organizer">Organizador:</label>
+        <input type="text" class="form-control" id="organizer" ng-model="meeting.organizer.name"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="start">Hora inicio:</label>
+        <input type="text" class="form-control" id="start" ng-model="meeting.start"></textarea>
+        <label for="end">Hora fim:</label>
+        <input type="text" class="form-control" id="end" ng-model="meeting.end"></textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="attendees">Participantes:</label>
+        <table class="table table-striped" id="attendees">
+            <tr>
+                <th>Nome</th>
+            </tr>
+            <tr ng-repeat="attendee in meeting.attendeeList">
+                <td><button class="btn btn-danger" ng-click="deleteName($index)">-</button>{{attendee.name}}</td>
+            </tr>
+        </table>
+        <input class="form-control" type="text" ng-model="tmpName">
+        <button class="btn btn-primary" ng-class="tmpName? 'enabled' : 'disabled'" ng-click="addAttendee(tmpName)">+</button>
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-success btn-lg" ng-click="processar(meeting)">
+            <i class="fa fa-step-forward" aria-hidden="true"></i>Consultar</button>
+
+        <button type="button" class="btn btn-success btn-lg" ng-click="meeting = undefined">
+            <i class="fa fa-step-forward" aria-hidden="true"></i>Limpar</button>
+    </div>
+    <div ng-show="carregando" class="big-icon">
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+    </div>
+</div>

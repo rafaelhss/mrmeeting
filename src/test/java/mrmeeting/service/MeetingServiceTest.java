@@ -4,6 +4,7 @@ import junit.framework.Assert;
 import mrmeeting.Application;
 import mrmeeting.meeting.Attendee;
 import mrmeeting.meeting.Meeting;
+import mrmeeting.meeting.MeetingMetrics;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,11 +72,8 @@ public class MeetingServiceTest {
 
     private Meeting getMeeting(List<String> attendees) {
         Meeting meeting = new Meeting();
-        meeting.setStart(new Date());
-        Calendar cal = Calendar.getInstance(); // creates calendar
-        cal.setTime(new Date()); // sets calendar time/date
-        cal.add(Calendar.HOUR_OF_DAY, 1); // adds one hour
-        meeting.setEnd(cal.getTime());
+        meeting.setStart("02:00");
+        meeting.setEnd("03:00");
         meeting.setSubject("Reuniao de teste");
 
         Attendee organizador = new Attendee();
@@ -126,7 +125,15 @@ public class MeetingServiceTest {
         DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.CEILING);
 
-        assertEquals(df.format(expectedCost), df.format(meetingService.calculate(meeting).getTotalCost()));
+        MeetingMetrics metrics = meetingService.calculate(meeting);
+        assertEquals(df.format(expectedCost), df.format(metrics.getTotalCost()));
+        assertNotNull(metrics.getMeeting());
+
+       /* long diff = metrics.getMeeting().getEnd().getTime() - metrics.getMeeting().getStart().getTime();
+        long diffHours = diff / (60 * 60 * 1000) % 24;
+
+        assertEquals(1, diffHours);
+*/
 
     }
 
