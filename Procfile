@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar  target/tillacheckout-0.1.0.jar
+web: java -Dserver.port=$PORT -jar  target/restapi-0.1.0.jar
