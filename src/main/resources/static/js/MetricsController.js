@@ -8,19 +8,20 @@
         ['$scope','$http', '$location','MrMeetingConfig', 'MeetingMetrics',
 
             function($scope, $http, $location, MrMeetingConfig, MeetingMetrics) {
+                MeetingMetrics.getit()
+                    .then(function (response) {
+                        console.log(response.data)
+                        $scope.meetingMetrics = response.data;
+                        $scope.meetingMetrics.minuteCost = ($scope.meetingMetrics.totalCost / $scope.meetingMetrics.minutesDuration);
 
 
-                    MeetingMetrics.getit()
-                        .then(function (response) {
-                            console.log(response.data)
-                            $scope.meetingMetrics = response.data;
-                        }, function (response) {
-                            console.log(response.status);
-                            $scope.erro = response.status;
-                        })
-                        .then(function () {
-                            $scope.carregando = false;
+                    }, function (response) {
+                        console.log(response.status);
+                        $scope.erro = response.status;
+                    })
+                    .then(function () {
+                        $scope.carregando = false;
 
-                        });
+                    });
             }]);
 })();

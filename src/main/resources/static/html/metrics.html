@@ -1,7 +1,5 @@
-<div class="col-md-6 col-md-padding-3">
-    <h3>Sua reuniao vai custar</h3>
-    {{meetingMetrics.totalCost}}
-    <p>
-        {{meetingMetrics}}
-    </p>
+<div class="col-md-8 col-md-offset-2">
+    <h2>Sua reuniao vai custar: <span style="font-size: xx-large">${{meetingMetrics.totalCost | currency:''}}</span></h2>
+    <h2>Sao <span style="font-size: xx-large">${{meetingMetrics.minuteCost | currency:''}}</span> por minuto.</h2>
+    <h2>Utilize o tempo em reuniao com inteligencia!</h2>
 </div>

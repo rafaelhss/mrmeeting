@@ -2,10 +2,10 @@
 var app = angular.module("MrMeetingApp", ['ngRoute', 'counter']);
 
 app.service('MrMeetingConfig',function(){
-    // this.apiUrl = "http://tillacheckout.herokuapp.com/api";
+     this.apiUrl = "http://mrmeeting.herokuapp.com/api";
     // this.adminUrl = "http://tillacheckout.herokuapp.com/admin";
 
-    this.apiUrl = "http://localhost:8080/api";
+    //this.apiUrl = "http://localhost:8080/api";
     //this.adminUrl = "http://localhost:8080/admin";
 });
 
@@ -15,15 +15,6 @@ app.factory('MeetingMetrics', function($http, MrMeetingConfig) {
     var MeetingMetrics = {
         getit: function(meeting) {
             // $http returns a promise, which has a then function, which also returns a promise
-
-            console.log("oi");
-
-            console.log(meeting);
-            console.log(this.currMeeting);
-            console.log(this.currMeeting != meeting);
-
-            console.log(promise);
-
             if(!promise || (meeting && this.currMeeting != meeting)){
                 this.currMeeting = meeting;
                 promise =
@@ -43,65 +34,6 @@ app.factory('MeetingMetrics', function($http, MrMeetingConfig) {
 
 
 app.controller("MrMeetingCtrl", function ($scope, $http, $interval) {
-
-    $scope.counter = {};
-    $scope.counter.myValue    = 0;
-    $scope.counter.myTarget   = 100;
-    $scope.counter.myDuration = 2000;
-    $scope.counter.myEffect = 'easeOutBack';
-
-    $scope.counter.effects  = [
-        'linear',
-        'swing',
-        'jswing',
-        'easeInQuad',
-        'easeOutQuad',
-        'easeInOutQuad',
-        'easeInCubic',
-        'easeOutCubic',
-        'easeInOutCubic',
-        'easeInQuart',
-        'easeOutQuart',
-        'easeInOutQuart',
-        'easeInQuint',
-        'easeOutQuint',
-        'easeInOutQuint',
-        'easeInSine',
-        'easeOutSine',
-        'easeInOutSine',
-        'easeInExpo',
-        'easeOutExpo',
-        'easeInOutExpo',
-        'easeInCirc',
-        'easeOutCirc',
-        'easeInOutCirc',
-        'easeInElastic',
-        'easeOutElastic',
-        'easeInOutElastic',
-        'easeInBack',
-        'easeOutBack',
-        'easeInOutBack',
-        'easeInBounce',
-        'easeOutBounce',
-        'easeInOutBounce'
-    ];
-
-    $scope.counter.finish = false;
-    $scope.counter.counterFinish = function () {
-        $scope.$apply(function () {
-            $scope.counter.finish = true;
-        });
-        $timeout(function () {
-            $scope.counter.finish = false;
-        }, 1000);
-    };
-
-    $scope.counter.toggleTarget = function () {
-        $scope.counter.myTarget = $scope.counter.myTarget ? 0 : 100;
-    };
-
-
-    $scope.$watch('$scope.counter.myEffect', $scope.counter.toggleTarget);
 
     var imgs = ["http://o.aolcdn.com/dims-shared/dims3/GLOB/crop/5010x3335+0+95/resize/640x426!/format/jpg/quality/85/http://o.aolcdn.com/hss/storage/adam/3d54e4f8c861ed52544f965a401f4446/B705JK.jpg",
         "http://ddhl74alddyxl.cloudfront.net/wp-content/uploads/2014/01/boringmeeting.jpg",
@@ -162,9 +94,4 @@ app.config(function($routeProvider, $locationProvider) {
         .otherwise({
             templateUrl: 'html/home.html'
         });
-
-
-
-
-//    $locationProvider.html5Mode(true);
 });
