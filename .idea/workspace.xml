@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a1c543e-5485-4b47-bf6c-1a0a71560dd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/html/colar.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/colar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/html/metrics.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/metrics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/ColarController.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/ColarController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/MetricsController.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/MetricsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/MrMeeting.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/MrMeeting.js" />
-    </list>
+    <list default="true" id="1a1c543e-5485-4b47-bf6c-1a0a71560dd4" name="Default" comment="" />
     <ignored path="restapi.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServidorTransparenciaProvider.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ServidorTransparenciaProvider.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/ServidorTransparenciaProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.48722318">
               <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
               <folding>
                 <element signature="e#645#646#0" expanded="true" />
@@ -104,10 +95,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MeetingServiceTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MeetingServiceTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/mrmeeting/service/MeetingServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44804087">
+            <state vertical-scroll-proportion="0.0">
               <caret line="103" column="38" selection-start-line="97" selection-start-column="28" selection-end-line="103" selection-end-column="38" />
               <folding />
             </state>
@@ -1143,17 +1134,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/ServidorTransparenciaProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mrmeeting/meeting/MeetingMetrics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5009488">
@@ -1194,6 +1174,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/mrmeeting/service/MeetingServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="38" selection-start-line="97" selection-start-column="28" selection-end-line="103" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/CostProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1204,11 +1192,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/mrmeeting/service/MeetingServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/ServidorTransparenciaProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44804087">
-          <caret line="103" column="38" selection-start-line="97" selection-start-column="28" selection-end-line="103" selection-end-column="38" />
-          <folding />
+        <state vertical-scroll-proportion="0.48722318">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
