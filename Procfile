@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar  target/tillacheckout-0.1.0.jar

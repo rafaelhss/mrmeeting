@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a1c543e-5485-4b47-bf6c-1a0a71560dd4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/ProdutosController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Upload.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/WhatsappController.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/ng-file-model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/js/tillaapp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/teste.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/teste.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/vendas.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mrmeeting/MeetingController.java" afterPath="$PROJECT_DIR$/src/main/java/mrmeeting/MeetingController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/CostProvider.java" afterPath="$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/CostProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/ServidorTransparenciaProvider.java" afterPath="$PROJECT_DIR$/src/main/java/mrmeeting/cost/servidor/ServidorTransparenciaProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mrmeeting/meeting/Meeting.java" afterPath="$PROJECT_DIR$/src/main/java/mrmeeting/meeting/Meeting.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mrmeeting/meeting/MeetingMetrics.java" afterPath="$PROJECT_DIR$/src/main/java/mrmeeting/meeting/MeetingMetrics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/mrmeeting/service/MeetingService.java" afterPath="$PROJECT_DIR$/src/main/java/mrmeeting/service/MeetingService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" afterPath="$PROJECT_DIR$/src/main/resources/static/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/adm/etiqueta.html" afterPath="$PROJECT_DIR$/src/main/resources/static/adm/etiqueta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/adm/relatorio.html" afterPath="$PROJECT_DIR$/src/main/resources/static/adm/relatorio.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/html/home.html" afterPath="$PROJECT_DIR$/src/main/resources/static/html/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mrmeeting/service/MeetingServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/mrmeeting/service/MeetingServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/MrMeeting.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/MrMeeting.js" />
     </list>
     <ignored path="restapi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -899,7 +880,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -987,7 +968,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1075,7 +1056,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1152,7 +1133,7 @@
         <state vertical-scroll-proportion="0.49914822">
           <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>

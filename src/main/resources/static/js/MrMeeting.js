@@ -1,5 +1,5 @@
 
-var app = angular.module("MrMeetingApp", ['ngRoute']);
+var app = angular.module("MrMeetingApp", ['ngRoute', 'counter']);
 
 app.service('MrMeetingConfig',function(){
     // this.apiUrl = "http://tillacheckout.herokuapp.com/api";
@@ -42,8 +42,83 @@ app.factory('MeetingMetrics', function($http, MrMeetingConfig) {
 
 
 
-app.controller("MrMeetingCtrl", function ($scope, $http) {
+app.controller("MrMeetingCtrl", function ($scope, $http, $interval) {
 
+    $scope.counter = {};
+    $scope.counter.myValue    = 0;
+    $scope.counter.myTarget   = 100;
+    $scope.counter.myDuration = 2000;
+    $scope.counter.myEffect = 'easeOutBack';
+
+    $scope.counter.effects  = [
+        'linear',
+        'swing',
+        'jswing',
+        'easeInQuad',
+        'easeOutQuad',
+        'easeInOutQuad',
+        'easeInCubic',
+        'easeOutCubic',
+        'easeInOutCubic',
+        'easeInQuart',
+        'easeOutQuart',
+        'easeInOutQuart',
+        'easeInQuint',
+        'easeOutQuint',
+        'easeInOutQuint',
+        'easeInSine',
+        'easeOutSine',
+        'easeInOutSine',
+        'easeInExpo',
+        'easeOutExpo',
+        'easeInOutExpo',
+        'easeInCirc',
+        'easeOutCirc',
+        'easeInOutCirc',
+        'easeInElastic',
+        'easeOutElastic',
+        'easeInOutElastic',
+        'easeInBack',
+        'easeOutBack',
+        'easeInOutBack',
+        'easeInBounce',
+        'easeOutBounce',
+        'easeInOutBounce'
+    ];
+
+    $scope.counter.finish = false;
+    $scope.counter.counterFinish = function () {
+        $scope.$apply(function () {
+            $scope.counter.finish = true;
+        });
+        $timeout(function () {
+            $scope.counter.finish = false;
+        }, 1000);
+    };
+
+    $scope.counter.toggleTarget = function () {
+        $scope.counter.myTarget = $scope.counter.myTarget ? 0 : 100;
+    };
+
+
+    $scope.$watch('$scope.counter.myEffect', $scope.counter.toggleTarget);
+
+    var imgs = ["http://o.aolcdn.com/dims-shared/dims3/GLOB/crop/5010x3335+0+95/resize/640x426!/format/jpg/quality/85/http://o.aolcdn.com/hss/storage/adam/3d54e4f8c861ed52544f965a401f4446/B705JK.jpg",
+        "http://ddhl74alddyxl.cloudfront.net/wp-content/uploads/2014/01/boringmeeting.jpg",
+        "http://i.huffpost.com/gen/1373463/thumbs/o-BORING-MEETING-facebook.jpg",
+    "http://www.firstsun.com/wp-content/uploads/2014/08/Meeting-Boring.jpg",
+    "http://www.incimages.com/uploaded_files/image/1940x900/bored-employees-in-presentation-1940x900_29877.jpg",
+    "http://cdn2.hubspot.net/hubfs/229288/images/Blog/boringmeeting.png"];   // your code puts strings into this array
+    var imgIdx = Math.floor((Math.random() * imgs.length));
+
+    $scope.bgimg = imgs[imgIdx];
+    $interval(function(){
+        ++imgIdx;
+        if (imgIdx >= imgs.length) {
+            imgIdx = 0;
+        }
+        $scope.bgimg = imgs[imgIdx];   // set new news item into the ticker
+    }, 7000)
 
 });
 

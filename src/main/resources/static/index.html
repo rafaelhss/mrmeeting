@@ -17,31 +17,217 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
 
+    <link href="circle.css" rel="stylesheet" type="text/css">
+
+    <script src="js/counter/jquery.easing.min.js"></script>
+    <script src="js/counter/angular-counter.js"></script>
 
 
     <script src="js/MrMeeting.js"></script>
     <script src="js/ColarController.js"></script>
     <script src="js/MetricsController.js"></script>
 
-
     <title>Mr. Meeting</title>
 
+    <style>
+        .jumbotron {
+            background: rgb(200, 54, 54); /* This is for ie8 and below */
+            background: rgba(54, 54, 54, 0.1);
+            text-align: center;
+        }
+        .row{
+            margin-bottom: 30px
+        }
+        .customButton{
+            background-color: rgba(54, 54, 54, 0.1);
+            border-radius: 10px;
+
+            text-align: center;
+            font-size: xx-large;
+
+         }
+        .customButton a:hover {
+            text-decoration: none;
+        }
+
+        .textcenter{
+            text-align: center;
+        }
+
+        .statistics {
+            font-size: xx-large;
+        }
+
+
+
+
+        img.bg {
+            /* Set rules to fill background */
+            min-height: 100%;
+            min-width: 1024px;
+
+            /* Set up proportionate scaling */
+            width: 100%;
+            height: auto;
+
+            /* Set up positioning */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -100;
+
+            -webkit-filter: opacity(10%);
+
+        }
+
+        @media screen and (max-width: 1024px) { /* Specific to this particular image */
+            img.bg {
+                left: 50%;
+                margin-left: -512px;   /* 50% */
+            }
+        }
+    </style>
 
 </head>
 
 <body ng-controller="MrMeetingCtrl">
+    <img ng-src="{{bgimg}}" class="bg">
     <div class="container">
 
         <div class="jumbotron">
             <h1>Mr Meeting</h1>
-            <h2 class="fancy"><span>Checkout</span></h2>
+            <h2><span>Calcule o custo de sua reuniao na Administracao Federal ou <a href="google.com">em sua organizacao privada</a></span></h2>
         </div>
-        
-         <div class="row session">
+
+        <div class="row">
             <ng-view></ng-view>
         </div>
+
+        <!-- `counter` directive can be used as: Element / Class / Attribute -->
+        <div  ng-controller="AngularCounterDemoCtrl as ctrl"  class="counter"
+                value="ctrl.myValue"
+                to="ctrl.myTarget"
+                duration="ctrl.myDuration"
+                effect="ctrl.myEffect"
+                finish="ctrl.counterFinish()"> {{ ctrl.myValue | number:0 }} % </div>
+
+        <!-- bind counter value anywhere -->
+        <span ng-bind="ctrl.myValue"></span>
+
+
+        <div class="row textcenter">
+            <div class="col-md-2 col-md-offset-1 statistics">
+                <div class="circle circle-border">
+                    <div class="circle-inner">
+                        <div class="score-text">
+                            213
+                        </div>
+                    </div>
+                </div>
+                Reunioes Processadas
+            </div>
+            <div class="col-md-2 col-md-offset-1 statistics">
+                <div class="circle circle-border">
+                    <div class="circle-inner">
+                        <div class="score-text">
+                            238
+                        </div>
+                    </div>
+                </div>
+                Horas de reuniao
+            </div>
+            <div class="col-md-2 col-md-offset-1 statistics">
+                <div class="circle circle-border">
+                    <div class="circle-inner">
+                        <div class="score-text">
+                            $213K
+                        </div>
+                    </div>
+                </div>
+                Investidos em reunioes
+            </div>
+            <div class="col-md-2 col-md-offset-1 statistics">
+                <div class="circle circle-border">
+                    <div class="circle-inner">
+                        <div class="score-text">
+                            1425
+                        </div>
+                    </div>
+                </div>
+                Pessoas envolvidas
+            </div>
+
+        </div>
+
+
+
     </div>
 
+<script>
+    angular
+            .module('AngularCounterDemo', ['counter'])
+            .controller('AngularCounterDemoCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
+                var ctrl = this;
 
+                ctrl.myValue    = 0;
+                ctrl.myTarget   = 100;
+                ctrl.myDuration = 2000;
+                ctrl.myEffect = 'easeOutBack';
+
+                ctrl.effects  = [
+                    'linear',
+                    'swing',
+                    'jswing',
+                    'easeInQuad',
+                    'easeOutQuad',
+                    'easeInOutQuad',
+                    'easeInCubic',
+                    'easeOutCubic',
+                    'easeInOutCubic',
+                    'easeInQuart',
+                    'easeOutQuart',
+                    'easeInOutQuart',
+                    'easeInQuint',
+                    'easeOutQuint',
+                    'easeInOutQuint',
+                    'easeInSine',
+                    'easeOutSine',
+                    'easeInOutSine',
+                    'easeInExpo',
+                    'easeOutExpo',
+                    'easeInOutExpo',
+                    'easeInCirc',
+                    'easeOutCirc',
+                    'easeInOutCirc',
+                    'easeInElastic',
+                    'easeOutElastic',
+                    'easeInOutElastic',
+                    'easeInBack',
+                    'easeOutBack',
+                    'easeInOutBack',
+                    'easeInBounce',
+                    'easeOutBounce',
+                    'easeInOutBounce'
+                ];
+
+                ctrl.finish = false;
+                ctrl.counterFinish = function () {
+                    $scope.$apply(function () {
+                        ctrl.finish = true;
+                    });
+                    $timeout(function () {
+                        ctrl.finish = false;
+                    }, 1000);
+                };
+
+                ctrl.toggleTarget = function () {
+                    ctrl.myTarget = ctrl.myTarget ? 0 : 100;
+                };
+
+                $scope.$watch('ctrl.myEffect', ctrl.toggleTarget);
+            }]);
+
+    hljs.initHighlightingOnLoad();
+</script>
 </body>
 </html>
