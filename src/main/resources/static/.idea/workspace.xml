@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MrMeeting.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MrMeeting.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/MrMeeting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13705584">
+            <state vertical-scroll-proportion="-1.6119403">
               <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
               <folding />
             </state>
@@ -77,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ColarController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ColarController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/ColarController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9104478">
-              <caret line="64" column="72" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.53807104">
+              <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -135,12 +135,12 @@
         <option value="$PROJECT_DIR$/js/ComprovanteController.js" />
         <option value="$PROJECT_DIR$/html/home.html" />
         <option value="$PROJECT_DIR$/circle.css" />
-        <option value="$PROJECT_DIR$/js/ColarController.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/html/colar.html" />
         <option value="$PROJECT_DIR$/js/MetricsController.js" />
         <option value="$PROJECT_DIR$/html/metrics.html" />
         <option value="$PROJECT_DIR$/js/MrMeeting.js" />
+        <option value="$PROJECT_DIR$/js/ColarController.js" />
       </list>
     </option>
   </component>
@@ -721,14 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ColarController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9104478">
-          <caret line="64" column="72" selection-start-line="64" selection-start-column="70" selection-end-line="64" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/circle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -777,8 +769,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/MrMeeting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13705584">
+        <state vertical-scroll-proportion="-1.6119403">
           <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ColarController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53807104">
+          <caret line="70" column="48" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
           <folding />
         </state>
       </provider>
